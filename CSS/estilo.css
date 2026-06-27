@@ -1,0 +1,471 @@
+/*================LIMPEZA PADRÃO===================*/
+
+/* Remove margens e paddings padrões de todos os navegadores e define o modelo de caixa Box-Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* inclusão de padding e border na largura/altura total */
+}
+
+/*==============BARRA DE NAVEGAÇÃO==================*/
+
+/* Definição do container principal do menu */
+.menu {
+    position: relative;
+    background: #8C7366; /* Cor de fundo marrom suave */
+}
+
+/* Configuração da lista de links do menu usando Flexbox para alinhamento horizontal */
+.menu ul {
+    display: flex;
+    list-style: none; /* Remove os marcadores de lista em formato de ponto */
+    gap: 20px; /* espaçamento entre cada item do menu */
+    height: 50px; /* Altura fixa da barra de navegação */
+    justify-content: center; /* Centraliza os itens na horizontal*/
+    align-items: center; /* Centraliza os itens na vertical */
+}
+
+/* Estilização de links do menu */
+.menu a { 
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+    color: #CFCFCF; /* Cor cinza claro */
+}
+
+/* Efeito visual ao passar o mouse sobre os links do menu */
+.menu a:hover { 
+    color: white; /* Muda o texto para branco */
+    text-decoration: underline double #7B391B; /* Adiciona sublinhado duplo */
+}
+
+/*-----------------SEÇÃO DO TOPO -----------------------*/
+
+/* Área de apresentação principal com fundo gradiente */
+#topo {
+    background: linear-gradient(to right, #efefd1, #a08787, #644747); /* Transição de cores horizontal */
+    height: auto;
+    min-height: 120px; /* altura mínima para o bloco */
+    display: flex; /* Distribuição dos elementos em linha flexível */
+    justify-content: space-between; /* Espaçamento máximo entre os textos e o elemento visual */
+    align-items: center; /* conteúdo na vertical */
+    padding: 20px 20px 0 8%; /* Ajusta o espaçamento interno do cabeçalho */
+}
+
+/* Caixa dos textos do topo (Títulos) */
+#caixaTopo {
+    padding: 20px;
+    flex: 1; /* expansão proporcional do container */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Estítulo principal de boas-vindas */
+#caixaTopo h3 {
+    font-size: 25px;
+    color: #7B391B;
+}
+
+/* subtítulo de apresentação profissional */
+#caixaTopo h4 {
+    color: #815333;
+    font-size: 18px;
+}
+
+/* imagem do topo */
+#bonecotopo {
+    display: flex;
+    flex-direction: column; /* conteúdo interno verticalmente */
+    justify-content: flex-end; /* imagem na base do container */
+    flex: 1;
+    align-items: flex-end; /* Alinha à direita */
+    margin-right: 250px; /* Margem direita para ajuste de layout desktop */
+}
+
+/* Configuração da imagem do top para responsividade */
+#bonecotopo img {
+    width: 100%;
+    max-width: 280px; /* limita o tamanho máximo para evitar distorção */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* --------------CORES DAS SEÇÕES-----------------*/
+
+/* cores de fundo claras e alternadas para quebrar a monotonia visual */
+#sobre, #portfolio {background: #E8EAE2;}
+#formacao, #contato { background: #EBEDE7;}
+
+/*-------SEÇÃO SOBRE MIM------- */
+
+/* Moldura redonda para a foto de perfil  */
+#foto {
+    background-color: white;
+    box-shadow: 8px 8px 5px -1px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    overflow: hidden; /* Corta a imagem para obedecer ao border-radius */
+    position: relative;
+    border-radius: 50%; /* Transforma a caixa quadrada em um círculo */
+    width: 250px;
+    height: 250px;
+}
+
+/* Ajuste da foto para preencher o container */
+#foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta e ajusta a imagem sem distorcer */
+}
+
+/* Efeito de opacidade ao passar o mouse sobre a foto */
+#foto:hover { opacity: 80%;}
+
+/* Bloco com texto da biografia */
+#eu {
+    width: 650px;
+    max-width: 90%; /* adaptação em telas ligeiramente menores */
+    height: auto;
+    border-radius: 10px;
+    background-color: #BFBFBF;
+    padding: 15px;
+}
+
+/* Efeito visual no hover da caixa de texto */
+#eu:hover { opacity: 80%;}
+
+/*-------CONTAINERS GERAIS E CARDS DO PORTFÓLIO-------- */
+
+/* Organização das seções de forma centralizada */
+.container {                          
+    display: flex;
+    flex-wrap: wrap; /* itens quebram linha se faltar espaço */
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* espaço entre os cards */
+    padding: 60px 5%;
+}
+
+/* Estrutura para os cards */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-height: 200px;
+    height: auto;
+    min-width: 300px; /* Define o tamanho mínimo estrutural do card */
+    width: auto;
+    border-radius: 10px;
+    background-color: white;
+    opacity: 70%; /* Transparência do card */
+    align-items: center;
+    justify-content: center; /* Centralização total do conteúdo interno */
+}
+
+/* Estilização do link interno dos cards para se comportar como um bloco flexível */
+.cards a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Centraliza o conteúdo horizontalmente */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    gap: 10px; /* Espaço entre a imagem e o texto */
+    width: 100%;
+    height: 100%;
+    text-decoration: none; /* Limpa estilo padrão link */
+    color: #7B391B; /* Cor base do link do projeto */
+}
+
+/* Mudança de cor do texto no link com hover */
+.cards a:hover { color: #6d574d; }
+
+/* Pré-visualização dos projetos */
+.cards a img {
+    width: 120px !important;  /* Força a largura fixa anulando estilos inline do HTML */
+    height: 120px !important; /* Força a altura fixa anulando estilos inline do HTML */
+    object-fit: contain; /* Ajusta a imagem inteira dentro do espaço sem cortes */
+    border-radius: 8px;
+}
+
+/* Opacidade das pré-visualização com hover*/
+.cards a img:hover {
+    opacity: 70%;
+}
+
+/*--------MARCADORES DE SEÇÃO-----------*/
+
+/* subtítulos mostrando onde o usuário está */
+.marcador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase; /* Força todas as letras a ficarem maiúsculas */
+    color: #7B391B;
+}
+
+/* mini-círculos decorativos antes e depois do texto do marcador */
+.marcador::before, .marcador::after {
+    content: "\25CF"; /* código para caractere de círculo preenchido */
+    color: #8C7366;
+}
+
+/*-------TÍTULOS PRINCIPAIS DAS SEÇÕES---------*/
+.titulo {
+    text-align: center;
+    padding: 10px;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    color: #927D71;
+}
+
+/* Configuração de tamanho para ícones dentro dos cards */
+.cards img {
+    display: block;
+    height: 50px;
+    width: 50px;
+}
+
+/*-----INFORMAÇÕES DE CONTATO--------*/
+
+/* Controle estrutural do vetor da área de contatos */
+#msg-vetor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 1 200px; /* Controla o crescimento, encolhimento e base do flex */
+}
+
+#msg-vetor img {
+    width: 100%;
+    height: auto;
+    opacity: 70%;
+}
+
+/* Alinhamento da lista vertical com informações de contato*/
+#infoContato {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 250px;
+}
+
+/* Ícones de contato */
+#infoContato img {
+    height: 50px;
+    width: 50px;
+}
+
+/* Organização em linha de cada item */
+.item-contato {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/*--------FORMULÁRIO DE CONTATO ------*/
+
+/* Container que distribui as informações e a caixa de formulário */
+.containerContato {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 85px;
+    padding: 80px 5%;
+}
+
+/* caixa estrutural do formulário */
+#formContato {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 350px; /* Largura limite para telas mobile e desktop */
+    background: #f3f5f0;
+    border-radius: 8px;
+}
+
+/* Rótulos textuais do formulário */
+label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*  campos de entrada de texto e e-mail */
+input, textarea {
+    padding: 12px;
+    border: none; /* Remove as bordas nativas */
+    border-radius: 8px;
+    font-size: 12px;
+    outline: none; /* Elimina a linha de contorno padrão ao focar no elemento */
+}
+
+/* Campo de inserção da mensagem de texto*/
+textarea {
+    height: 120px;
+    max-width: 300px;
+    width: 100%;
+    resize: none; /* Desativa a capacidade do usuário de deformar a caixa */
+}
+
+/* Botão de envio do formulário de contato */
+button {
+    padding: 12px;
+    background-color: #8C7366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer; /* cursor 'mãozinha' indicando clique */
+}
+
+/* Mudança hover do botão */
+button:hover {
+    background-color: #6d574d;
+}
+
+/*--------RODAPÉ DA PÁGINA------*/
+footer {
+    display: flex;
+    gap: 20px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background: #8C7366;  
+    color: white;
+}
+
+/* ===============================TEMA ESCURO================================== */
+
+/*------botão do modo escuro------ */
+#toggleTheme {
+    position: absolute;
+    right: 50px; /* distância do botão em relação ao canto direito do menu */
+    top: 25px; 
+    transform: translateY(-50%); /* Centralização no eixo Y */
+    white-space: nowrap;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Classe aplicada via JavaScript ao elemento body para ativação de cores invertidas */
+.dark-mode {
+    background-color: #302f2f;
+    color: #f1f1f1;
+}
+
+/* Altera o fundo e links do menu no modo noturno */
+.dark-mode .menu { background: #1f1f1f;}
+
+.dark-mode .menu a { color: #ddd;}
+
+.dark-mode .menu a:hover { color: white;}
+
+/* Altera o gradiente do topo para cores escuras*/
+.dark-mode #topo { background: linear-gradient(to right, #1a1a1a, #2a2a2a, #111);}
+
+/* Modifica caixas para modo escuro */
+.dark-mode #caixaTopo { background-color: transparent;}
+
+.dark-mode #eu,
+.dark-mode .cards,
+.dark-mode #formContato {
+    background-color: #909090;
+    color: #f1f1f1;
+}
+
+/* cores das caixas de input do formulário de contato modo escuro */
+.dark-mode input,
+.dark-mode textarea {
+    background-color: #2a2a2a;
+    color: white;
+}
+
+/* Botão do formulário modo escuro*/
+.dark-mode button {
+    padding: 12px;
+    background-color: #1a1818;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dark-mode button:hover {
+    background-color: #3f3a37;
+}
+
+/* planos de fundo gerais das seções no modo escuro */
+.dark-mode #sobre,
+.dark-mode #portfolio,
+.dark-mode #formacao,
+.dark-mode #contato {
+    background-color: #181818;
+}
+
+/* Cor do rodapé para o modo escuro */
+.dark-mode footer {
+    background-color: #1f1f1f;
+}
+
+/* ================================RESPONSIVIDADE (MEDIA QUERIES)================================= */
+
+/* Regras quando a largura da tela do dispositivo for igual ou menor que 768px (Tablets e Celulares) */
+@media (max-width: 768px) {
+    
+    /* Converte as disposições em linha para coluna*/
+    .container {  flex-direction: column;}
+
+    /* menu em formato de bloco empilhado adaptado a telas verticais */
+    .menu {
+        background: #8C7366;  
+        padding: 15px 5%;
+        height: auto; /* Libera a altura para conter a quebra de linha dos links */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    } 
+
+    /* Ajusta a flexibilidade dos links no menu */
+    .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        height: auto;
+        background: transparent;
+    }
+
+    /* Força caixas de texto multilinha a ocuparem toda a largura disponível */
+    textarea {width: 100%;}
+
+    /* Empilha os elementos e centraliza os textos do bloco de boas-vindas */
+    #topo {
+        flex-direction: column;     
+        text-align: center;         
+        padding: 20px 5%;
+    }
+
+    /* Reposiciona e remove margens exageradas da imagem do topo */
+    #bonecotopo {
+        justify-content: center;    
+        margin: 20px 0 0 0;         
+        width: 100%;
+        align-items: center;
+    }
+
+    /* Reseta o botão de tema de absoluto para estático*/
+    #toggleTheme {
+        position: static;           
+        background: transparent;    
+        border: none;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        transform: none;           
+        font-size: 18px;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yanka - Portfólio</title>     <!--Título da página-->
+    <link rel="stylesheet" href="CSS/estilo.css">   <!--Arquivo CSS-->
+    <link rel="icon" type="image/x-icon" href="imagens/favicon.png"> <!--Ícone da página-->
+</head>
+
+<body>
+    
+    <!--MENU DE NAVEGAÇÃO-->
+    <header class="menu">
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#formacao">Formação</a></li>               
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    <button id="toggleTheme">🌙</button>         <!--BOTÃO MODO ESCURO-->
+
+    </header>
+
+       <!--CONTAINER ABAIXO DO MENU-->
+    <div id="topo">
+        <div id="caixaTopo">
+        <h3>Seja bem-vindo!</h3>
+        <h4>Portfólio de uma futura Engenheira de Software</h4>
+        </div>
+        <div id="bonecotopo">
+            <img src="imagens/imagemtopo2.png" alt="imagem de topo">
+        </div>
+    </div>
+
+    <!--CONTAINERS LIGANDO COM AS SEÇÕES DA PÁGINA-->
+    <section id="sobre">
+        <span class="marcador">Sobre</span>
+        <h2 class="titulo">Sobre Mim</h2>
+        <div class="container">
+             <div id="foto">
+              <img src="imagens/foto.jpg" alt="foto da Yanka">
+            </div>
+            <div id="eu">
+            <p>
+            Meu nome é Yanka, tenho 28 anos, nascida e criada no interior de São Paulo, atualmente residindo em Brasília. 
+            Meus hobbies são viajar, correr e assistir a filmes. Sou estudante de Engenharia de Software, estou no segundo
+            semestre do curso. Desde criança, sempre me interessei por tecnologia, porém o meu âmbito profissional tornou-se outro e 
+            essa curiosidade ficou guardada. Depois de muitos anos, fui percebendo que a tecnologia estava avançando cada vez mais e
+            renasceu o desejo de aprender e empregar a respeito.</p>
+           <p> Hoje, graças ao entusiasmo e conhecimentos que venho adquirindo, vejo-me capaz de auxiliar às pessoas e me adaptar às 
+            exigências do mercado. Acredito que manusear as ferramentas certas é o diferencial para garantir o sucesso em qualquer
+            atividade a ser realizada e estou disposta a empregá-las da melhor forma possível.</p>
+    </div>
+           
+         </div>
+    </section>
+
+     <section id="formacao">
+        <span class="marcador">Formação</span>
+        <h2 class="titulo">Minha formação</h2>
+        <div class="container">
+        <div class="cards">
+            <img src="imagens/graduacao.png" alt="beca"> 
+            <br>
+            <p><b>Graduação</b></p>
+            <br>
+            <p>Engenharia de Software</p>
+            <br>
+            <p>2025 - 2029 (em andamento)</p>
+        </div>
+
+        <div class="cards">
+             <img src="imagens/idioma.png" alt="figura representando idiomas"> 
+             <br>
+            <p><b>Idioma</b></p>
+            <br>
+            <p>Inglês - básico</p>
+            <p>Espanhol - básico</p>
+        </div>
+        <div class="cards">
+             <img src="imagens/livro.png" alt="figura de livros"> 
+             <br>
+            <p><b>Habilidades desenvolvidas</b></p>
+            <br>
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>JavaScript</p>
+            <p>Python</p>
+        </div>
+        </div>
+
+    </section>
+
+     <section id="portfolio">
+        <span class="marcador">Portfólio</span>
+        <h2 class="titulo">Meus Projetos</h2>
+        <div class="container">
+            
+    <!-- CARD 1 - CALCULADORA IMC -->
+        <div class="cards">
+            <a href="https://yankatech.github.io/calculoIMC/" target="_blank">
+            <img src="imagens/previewimc.png" alt="Cálculo IMC" style="width: 80%; height: 80%; object-fit: cover; border-radius: 10px;">
+            <span>Calculadora de IMC</span>
+        </a></div>
+
+    <!--CARD 2 - LISTA DE TAREFAS -->
+        <div class="cards">
+            <a href="https://yankatech.github.io/listadetarefas/" target="_blank">
+                    <img src="imagens/previewlista.png" alt="Lista de Tarefas" style="width: 80%; height: 80%; object-fit: cover; border-radius: 10px;">
+                <span>Lista de Tarefas</span>
+                </a>
+        </div>
+
+    <!-- CARD 3 - CONVERSOR DE MOEDAS-->
+        <div class="cards">
+            <a href="https://yankatech.github.io/conversordemoedas/" target="_blank">
+                    <img src="imagens/previewmoedas.png" alt="Conversor de Moedas" style="width: 80%; height: 80%; object-fit: cover; border-radius: 10px;">
+                <span>Conversor de Moedas</span>
+                </a>
+        </div>
+        </div>
+
+    </section>
+
+        <!--INFORMAÇÕES DE CONTATO-->
+    <section id="contato">
+        <span class="marcador">Contato</span>
+        <h2 class="titulo">Fale comigo</h2>
+    
+    <div class="containerContato">
+        <div id="msg-vetor">
+             <img src="imagens/msg.png" alt="vetor de mensagem">
+        </div>
+
+        <div id="infoContato">
+            <div class="item-contato">
+                <img src="imagens/perfil.png" alt="Yanka">
+                <p>Yanka</p>
+            </div>
+            <div class="item-contato">
+                <img src="imagens/iemail.png" alt="e-mail Yanka">
+                <p>contact.yankasantos@gmail.com</p>
+            </div>
+            <div class="item-contato">
+                <img src="imagens/gps.png" alt="localização da Yanka">
+                <p>Brasília-DF</p>
+            </div>
+            <div class="item-contato">
+                <img src="imagens/github.png" alt="github da Yanka "> 
+                <p>yankatech</p>
+            </div>
+
+        </div>
+
+        <!--FORMULÁRIO DE CONTATO-->
+
+        <form id="formContato">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email">
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Escreva aqui"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+<p id="erro"></p>
+    
+       </div>
+       
+    </section>
+
+ <!--RODAPÉ DA PÁGINA-->
+    <footer>
+        <p>&copy; 2026 Yanka. Todos os direitos reservados.</p>
+    </footer>
+
+ <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init("_Zsymnde0lShK5yRT");
+</script>
+
+<script src="JavaScript/script.js"></script> <!--SCRIPT DA PÁGINA-->
+
+</body>
+
+</html>
+
+<!--CRÉDITOS IMAGENS
+*Ícones criados por Freepik - Flaticon:
+computador, pefil, graduação, idioma, livros, e-mail, avião
+*Logotipo oficial da GitHub
+*Ilustração de programadora por Storyset-->
+ 
